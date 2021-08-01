@@ -1,3 +1,4 @@
+<!-- do not change the markup -->
 <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
 <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js" integrity="sha384-smHYKdLADwkXOn1EmN1qk/HfnUcbVRZyYmZ4qpPea6sjB/pTJ0euyQp0Mk8ck+5T" crossorigin="anonymous"></script>
@@ -58,7 +59,7 @@ body, html {
 </style>
 <body>
 
-
+<!-- Navbar  -->
 <div class="w3-top">
   <div class="w3-bar" id="myNavbar">
     <a class="w3-bar-item w3-button w3-hover-black w3-hide-medium w3-hide-large w3-center" href="javascript:void(0);" onclick="toggleFunction()" title="Toggle Navigation Menu">
@@ -79,13 +80,36 @@ body, html {
   </div>
 </div>
 
-<div class="bgimg-1 w3-display-container w3-opacity-min" id="home">
+<div class=" w3-display-container w3-padding-64 w3-opacity-min" id="title">
   <div class="w3-display-middle" style="white-space:nowrap;">
     <span class="w3-center w3-padding-large w3-black w3-xlarge w3-wide w3-animate-opacity"> To-Do List </span>
   </div>
 </div>
 
 <div class="w3-content w3-container w3-padding-64" id="about">
+  <ul class="w3-ul w3-container w3-margin w3-card-4 w3-display-left" style="width:30%">
+  <li class="w3-display-container">test 
+  <span onclick="this.parentElement.style.display='none'" 
+        class="w3-button w3-display-right">&times;</span></li>
+  <li class="w3-display-container">test 
+  <span onclick="this.parentElement.style.display='none'" 
+        class="w3-button w3-display-right">&times;</span></li>
+  <li class="w3-display-container">test 
+  <span onclick="this.parentElement.style.display='none'" 
+        class="w3-button w3-display-right">&times;</span></li>
+</ul>
+    <ul class="w3-ul w3-container w3-margin w3-card-4 w3-display-right" style="width:30%">
+  <li class="w3-display-container">test 
+    <span onclick="this.parentElement.style.display='none'" 
+        class="w3-button w3-display-right">&times;</span></li>
+  <li class="w3-display-container">test 
+    <span onclick="this.parentElement.style.display='none'" 
+        class="w3-button w3-display-right">&times;</span></li>
+  <li class="w3-display-container">test 
+    <span onclick="this.parentElement.style.display='none'" 
+        class="w3-button w3-display-right">&times;</span></li>
+</ul>
+  
   <h3 class="w3-center"><em>Database Project</em></h3>
   <p>Yeah</p>
 
