@@ -46,6 +46,13 @@ body, html {
   background-image: url("/w3images/parallax3.jpg");
   min-height: 400px;
 }
+  
+ 
+  
+  ul {
+    display: inline-block;
+  }
+  
 
 .w3-wide {letter-spacing: 10px;}
 .w3-hover-opacity {cursor: pointer;}
@@ -85,10 +92,11 @@ body, html {
     <span class="w3-center w3-padding-large w3-black w3-xlarge w3-wide w3-animate-opacity"> To-Do List </span>
   </div>
 </div>
-
-<div class="w3-content w3-display-container w3-padding-64" id="lists">
-  <span class = "w3-middle">
-  <ul class="w3-ul w3-container w3-margin w3-card-4 w3-display-left" style="width:30%">
+  
+<div class="w3-content w3-display-container w3-center " id="lists">
+   <span class = "w3-middle"> 
+  <ul class="w3-ul w3-container w3-margin w3-card-4 " style="width:30%">
+    <li><h3>Overdue Tasks</h3></li>
   <li class="w3-display-container">test 
   <span onclick="this.parentElement.style.display='none'" 
         class="w3-button w3-display-right">&times;</span></li>
@@ -99,20 +107,24 @@ body, html {
   <span onclick="this.parentElement.style.display='none'" 
         class="w3-button w3-display-right">&times;</span></li>
 </ul>
-
-    <ul class="w3-ul w3-container w3-margin w3-card-4 w3-display-right" style="width:30%">
+   
+    <ul class="w3-ul w3-container w3-margin w3-card-4 " style="width:30%">
+      <li><h3>Due Today</h3></li>
   <li class="w3-display-container">test 
-    <span onclick="this.parentElement.style.display='none'" 
+  <span onclick="this.parentElement.style.display='none'" 
         class="w3-button w3-display-right">&times;</span></li>
   <li class="w3-display-container">test 
-    <span onclick="this.parentElement.style.display='none'" 
+  <span onclick="this.parentElement.style.display='none'" 
         class="w3-button w3-display-right">&times;</span></li>
   <li class="w3-display-container">test 
-    <span onclick="this.parentElement.style.display='none'" 
+  <span onclick="this.parentElement.style.display='none'" 
         class="w3-button w3-display-right">&times;</span></li>
 </ul>
-      </span>
-    </div>
+    </span>
+     </div>
+  <br>
+
+  
 
   <div class="w3-content w3-display-container w3-padding-64" id="bottom">
   <span class="w3-display-bottom"> <h3><em>Database Project</em></h3></span>
