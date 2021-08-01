@@ -1,112 +1,183 @@
-<!DOCTYPE html>
-<html>
-<head>
-<title>Authors</title>
-<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
-<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" integrity="sha384-WskhaSGFgHYWDcbwN70/dfYBj47jz9qbsMId/iRN3ewGhXQFZCSftd1LZCfmhktB" crossorigin="anonymous">
-<body style = "background-color: lavender">
-
-<style>
-.century {
-	font-family: "Century Gothic";
-}
-
-
-body, html {
-    height: 100%;
-    margin: 0;
-}
-
-.hero-text {
-  text-align: center;
-  color: black;
-}
-
-.hero-text button {
-  border: none;
-  outline: 0;
-  display: inline-block;
-  padding: 10px 25px;
-  color: black;
-  background-color: #ddd;
-  text-align: center;
-  cursor: pointer;
-}
-
-.hero-text button:hover {
-  background-color: #555;
-  color: white;
-
-}
-
-
-</style>
-
-<div class = "hero-image">
-	<nav class="navbar navbar-expand-lg navbar-light" style = "background-color: skyblue; opacity: 0.9">
-		<a class="navbar-brand" href="index.html">Database Project</a>
-	  	<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-	    <span class="navbar-toggler-icon"></span>
-	  	</button>
-
-		<div class="collapse navbar-collapse" id="navbarSupportedContent">
-		<ul class="navbar-nav mr-auto">
-		  <li class="nav-item">
-		    <a class="nav-link" href="index.html">Main</a>
-		  </li>
-		  <li class="nav-item">
-		    <a class="nav-link" href="#">Authors</a>
-		  </li>
-		  <li class="nav-item">
-		    <a class="nav-link" href="database.html">Database</a>
-		  </li>
-		</ul>
-		</div>
-	</nav>
-	<div class = "hero-text">
-		<h1 class = "century" style = "font-size: 50px;">Authors</h1>
-	</div>
-</div>
-
-</head>
-<body>
-
-<form>
-<div class = "col-lg-12 text-center">
-  Ali - 23 Senior Student<br>
-  Hello, my name is Ali and I'm currently on my last year of my Computer Science degree. In addition <br> to this class, I'm also currently taking
-  Operating Systems, Software Engineering, and Calculus 3. <br> In my down time I like to animate, make games, and work on cars.<br>
-  <img src="profile.png" class="w3-round w3-center w3-image w3-opacity w3-hover-opacity-off" width="300" height="200"><br>
-  <br>
-</div>
-<div class = "col-lg-12 text-center">
-  Maksuda -24 Senior Student<br>
-  Hello, my name is Maksuda and I'm a senior student I'm majoring in Computer Science degree. In addition <br> to this class, I'm also currently taking
-  Software Engineering class. <br> My hobby is painting and I love visiting new places on my free time.<br>
-<img src="cat.png" class="w3-round w3-center w3-image w3-opacity w3-hover-opacity-off" width="300" height="200"><br>
-  <br>
-</div>
-<div class = "col-lg-12 text-center">
-  Shanjeda Kona- 22 Senior Student<br>
-  Hello, my name is Shanjeda and I'm a senior student majoring in Computer Science and minoring in bussiness. In addition <br> to this class, I'm also currently taking
-  Software Engineering class and Computer Architecture. <br> My hobby is traveling and I love visiting new places on my free time. I also like to draw anime characters 
-  in my spare time. <br>
-<img src="avator.png" class="w3-round w3-center w3-image w3-opacity w3-hover-opacity-off" width="300" height="200"><br>	
-	<br>
-</div>
-<div class = "col-lg-12 text-center">
-  Kelly - 27 - Senior CS Major<br>
-	Hi, my name is Kelly Whitlock and I am currently a senior at Wayne State studying Computer Science. My hobbies <br> include playing video games,
-	creating art, and playing disc golf. I have dog named Luke and a cat named Luna. I also love to travel in my free time. <br>
-	
-<img src="BOO.png" class="w3-round w3-center w3-image w3-opacity w3-hover-opacity-off" width="300" height="200"><br>		
-</div>
-</form>
-	
-
-<script src = "quote_controller.js"></script>
 <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
 <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js" integrity="sha384-smHYKdLADwkXOn1EmN1qk/HfnUcbVRZyYmZ4qpPea6sjB/pTJ0euyQp0Mk8ck+5T" crossorigin="anonymous"></script>
+</body>
+</html>
+</DOCTYPE>
+
+<!DOCTYPE html>
+<html>
+<title>Database Project Group 5</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<style>
+body,h1,h2,h3,h4,h5,h6 {font-family: "Lato", sans-serif;}
+body, html {
+  height: 100%;
+  color: #777;
+  line-height: 1.8;
+}
+
+/* Create a Parallax Effect */
+.bgimg-1, .bgimg-2, .bgimg-3 {
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+/* First image (Logo. Full height) */
+.bgimg-1 {
+  background-image: url('background.gif');
+  min-height: 100%;
+}
+
+/* Second image (Portfolio) */
+.bgimg-2 {
+  background-image: url("/w3images/parallax2.jpg");
+  min-height: 400px;
+}
+
+.bgimg-3 {
+  background-image: url("/w3images/parallax3.jpg");
+  min-height: 400px;
+}
+
+.w3-wide {letter-spacing: 10px;}
+.w3-hover-opacity {cursor: pointer;}
+
+@media only screen and (max-device-width: 1600px) {
+  .bgimg-1, .bgimg-2, .bgimg-3 {
+    background-attachment: scroll;
+    min-height: 400px;
+  }
+}
+</style>
+<body>
+
+
+<div class="w3-top">
+  <div class="w3-bar" id="myNavbar">
+    <a class="w3-bar-item w3-button w3-hover-black w3-hide-medium w3-hide-large w3-center" href="javascript:void(0);" onclick="toggleFunction()" title="Toggle Navigation Menu">
+      <i class="fa fa-bars"></i>
+    </a>
+    <a href="index.html" class="w3-bar-item w3-button">HOME</a>
+    <a href="#authorspage" class="w3-bar-item w3-button w3-hide-small"><i class="fa"></i> AUTHORS</a>
+    <a href="database.html" class="w3-bar-item w3-button w3-hide-small"><i class="fa"></i> DATABASE</a>
+    <a href="#" class="w3-bar-item w3-button w3-hide-small w3-right w3-hover-red">
+      <i class="fa fa-search"></i>
+    </a>
+  </div>
+
+  <!-- Navbar on small screens -->
+  <div id="navDemo" class="w3-bar-block w3-white w3-hide w3-hide-large w3-hide-medium">
+    <a href="#about" class="w3-bar-item w3-button" onclick="toggleFunction()">AUTHORS</a>
+    <a href="#" class="w3-bar-item w3-button">SEARCH</a>
+  </div>
+</div>
+
+<div class="bgimg-1 w3-display-container w3-opacity-min" id="home">
+  <div class="w3-display-middle" >
+    <span class="w3-center w3-padding-large w3-black w3-xlarge w3-wide w3-animate-opacity"> Authors </span>
+  </div>
+</div>
+  
+  <body>
+  <form>
+    
+<div class="w3-content w3-container w3-padding-50" id="about">
+  <img src="profile.png" class="w3-round w3-left w3-image w3-opacity w3-hover-opacity-off"          width="200" height="100">
+    <h3 class="w3-left"><em>Ali - 23 - Senior </em></h3> 
+    <br> 
+      <div class = "col-lg-12 text-left">
+        <br><br>
+  Hello, my name is Ali and I'm currently on my last year of my Computer Science degree. In addition to this class, I'm also currently taking
+  Operating Systems, Software Engineering, and Calculus 3. <br> In my down time I like to animate, make games, and work on cars.<br>
+        <br> <br>
+      </div>
+</div>
+<br>
+    
+<div class="w3-content w3-container w3-padding-50" id="about">
+  <img src="cat.png" class="w3-round w3-left w3-image w3-opacity w3-hover-opacity-off"        width="200" height="100">
+    <h3 class="w3-left"><em>Maksuda - 24 - Senior </em></h3> 
+    <br>
+      <div class = "col-lg-12 text-left">
+        <br><br>
+  Hello, my name is Maksuda and I'm a senior student I'm majoring in Computer Science degree. In addition to this class, I'm also currently taking Software Engineering class. My hobby is painting and I love visiting new places on my free time.<br> <br>
+        <br>
+      </div>
+</div>
+    <br>
+    
+<div class="w3-content w3-container w3-padding-50" id="about">
+  <img src="avator.png" class="w3-round w3-left w3-image w3-opacity w3-hover-opacity-off"        width="200" height="100">
+    <h3 class="w3-left"><em> Shanjeda Kona - 22 - Senior </em></h3> 
+    <br>
+      <div class = "col-lg-12 text-left">
+        <br><br>
+   Hello, my name is Shanjeda and I'm a senior student majoring in Computer Science and minoring in bussiness. In addition to this class, I'm also currently taking Software Engineering class and Computer Architecture. My hobby is traveling and I love visiting new places on my free time. I also like to draw anime characters 
+  in my spare time. <br><br>
+        <br>
+      </div>
+</div>
+    <br>
+    
+<div class="w3-content w3-container w3-padding-50" id="about">
+  <img src="BOO.png" class="w3-round w3-left w3-image w3-opacity w3-hover-opacity-off"        width="200" height="100">
+    <h3 class="w3-left"><em> Kelly - 27 - Senior </em></h3> 
+    <br>
+      <div class = "col-lg-12 text-left">
+        <br><br>
+   Hi, my name is Kelly Whitlock and I am currently a senior at Wayne State studying Computer Science. My hobbie include playing video games, creating art, and playing disc golf. I have dog named Luke and a cat named Luna. I also love to travel in my free time. <br> <br>
+        <br>
+      </div>
+</div>
+    <br>
+  
+
+</form>
+
+    <div class="w3-col m6 w3-hide-small w3-padding-large">
+      <p></p>
+    </div>
+  </div>
+
+
+ 
+<script>
+// Modal Image Gallery
+function onClick(element) {
+  document.getElementById("img01").src = element.src;
+  document.getElementById("modal01").style.display = "block";
+  var captionText = document.getElementById("caption");
+  captionText.innerHTML = element.alt;
+}
+
+// Change style of navbar on scroll
+window.onscroll = function() {myFunction()};
+function myFunction() {
+    var navbar = document.getElementById("myNavbar");
+    if (document.body.scrollTop > 100 || document.documentElement.scrollTop > 100) {
+        navbar.className = "w3-bar" + " w3-card" + " w3-animate-top" + " w3-white";
+    } else {
+        navbar.className = navbar.className.replace(" w3-card w3-animate-top w3-white", "");
+    }
+}
+
+// Used to toggle the menu on small screens when clicking on the menu button
+function toggleFunction() {
+    var x = document.getElementById("navDemo");
+    if (x.className.indexOf("w3-show") == -1) {
+        x.className += " w3-show";
+    } else {
+        x.className = x.className.replace(" w3-show", "");
+    }
+}
+</script>
+
 </body>
 </html>
