@@ -12,11 +12,8 @@
 
 <head>
   
-  <title>Crisler Arena Tickets Confirmation Page, v5</title>
+  <title>Confirmation Page, v5</title>
   <meta charset="UTF-8">
-  <meta name="author" content="Dan Ouellette"/>
-  <meta name="description" content="Crisler Arena"/>
-  <meta name="keywords" content="arena, events">
   
   <!-- External CSS link -->
   <link rel="stylesheet" type="text/css" 
@@ -30,7 +27,7 @@
       $(function()
       {    
         var queryString = "request=list";
-        $.get(tbTickets, 
+        $.get(tbTask, 
           queryString);
       });
     }
@@ -39,13 +36,6 @@
 </head>
  
 <body onload="loadTickets()">
-
-  <!-- Header section -->
-  <div class="headerPanel">
-    <h1>
-      Crisler Arena Tickets Confirmation
-    </h1>
-  </div>
 
   <!-- Menu section -->
   <div class="menuPanel">
@@ -133,28 +123,6 @@
     ?>
     <br>
 
-  </div>
-
-  <!-- Right panel -->
-  <div class="contentPanel3">
-  
-    <!-- Arena seating chart -->
-    <img 
-      src="CrislerArenaSeatingChart.png" alt="Image Missing!" 
-      width="70%" height="70%"
-      />
-
-  </div>
-
-  <!-- Footer section -->
-  <div class="footerPanel">
-    <h3>
-      Crisler Arena
-      &nbsp;&nbsp;333 East Stadium Blvd, Ann Arbor, MI 48109, MI
-      &nbsp;&nbsp;734-761-3355
-      &nbsp;&nbsp;<a href="mailto:info@crislerarena-annarbor.com">Email Us!</a>
-      &nbsp;&nbsp;Copyright &#169; 2021
-    </h3>
   </div>
   
 </body>

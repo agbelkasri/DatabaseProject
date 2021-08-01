@@ -3,11 +3,8 @@
 
 <head>
   
-  <title>Crisler Arena Database</title>
+  <title>Database</title>
   <meta charset="UTF-8">
-  <meta name="author" content="Dan Ouellette"/>
-  <meta name="description" content="Crisler Arena"/>
-  <meta name="keywords" content="arena, events">
   
   <!-- External CSS link -->
   <link rel="stylesheet" type="text/css" 
@@ -16,13 +13,6 @@
 </head>
  
 <body>
-
-  <!-- Header section -->
-  <div class="headerPanel">
-    <h1>
-      Crisler Arena Database Status
-    </h1>
-  </div>
 
   <!-- Menu section -->
   <div class="menuPanel">
@@ -55,7 +45,7 @@
       }
       echo "Connected successfully";
 
-      $sql = INSERT INTO tbTickets (Name, Event, EventDate, Tickets, Total)
+      $sql = INSERT INTO tbTasks (Name, Event, EventDate, Tickets, Total)
       VALUES ($_GET["txtCustomerName"], $_GET["cmbEvent"], $_GET["txtDate"], $_GET["txtTickets"], $_GET["txtTotal"]);
 
       // Customer name and e-mail
@@ -124,28 +114,6 @@
     ?>
     <br>
 
-  </div>
-
-  <!-- Right panel -->
-  <div class="contentPanel3">
-  
-    <!-- Arena seating chart -->
-    <img 
-      src="CrislerArenaSeatingChart.png" alt="Image Missing!" 
-      width="70%" height="70%"
-      />
-
-  </div>
-
-  <!-- Footer section -->
-  <div class="footerPanel">
-    <h3>
-      Crisler Arena
-      &nbsp;&nbsp;333 East Stadium Blvd, Ann Arbor, MI 48109, MI
-      &nbsp;&nbsp;734-761-3355
-      &nbsp;&nbsp;<a href="mailto:info@crislerarena-annarbor.com">Email Us!</a>
-      &nbsp;&nbsp;Copyright &#169; 2021
-    </h3>
   </div>
   
 </body>
