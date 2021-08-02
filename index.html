@@ -22,7 +22,73 @@ body, html {
   color: #777;
   line-height: 1.8;
 }
+/* The container */
+.container {
+  display: block;
+  position: relative;
+  padding-left: 35px;
+  margin-bottom: 12px;
+  cursor: pointer;
+  font-size: 22px;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
 
+/* Hide the browser's default checkbox */
+.container input {
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+  height: 0;
+  width: 0;
+}
+
+/* Create a custom checkbox */
+.checkmark {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 25px;
+  width: 25px;
+  background-color: #eee;
+}
+
+/* On mouse-over, add a grey background color */
+.container:hover input ~ .checkmark {
+  background-color: #ccc;
+}
+
+/* When the checkbox is checked, add a blue background */
+.container input:checked ~ .checkmark {
+  background-color: #2196F3;
+}
+
+/* Create the checkmark/indicator (hidden when not checked) */
+.checkmark:after {
+  content: "";
+  position: absolute;
+  display: none;
+}
+
+/* Show the checkmark when checked */
+.container input:checked ~ .checkmark:after {
+  display: block;
+}
+
+/* Style the checkmark/indicator */
+.container .checkmark:after {
+  left: 9px;
+  top: 5px;
+  width: 5px;
+  height: 10px;
+  border: solid white;
+  border-width: 0 3px 3px 0;
+  -webkit-transform: rotate(45deg);
+  -ms-transform: rotate(45deg);
+  transform: rotate(45deg);
+}
   
 /* Create a Parallax Effect */
 .bgimg-1, .bgimg-2, .bgimg-3 {
@@ -76,7 +142,6 @@ body, html {
     </a>
     <a href="#home" class="w3-bar-item w3-button">HOME</a>
     <a href="authorspage.html" class="w3-bar-item w3-button w3-hide-small"><i class="fa"></i> AUTHORS</a>
-    <a href="database.html" class="w3-bar-item w3-button w3-hide-small"><i class="fa"></i> CREATE TASK</a>
     <div class="w3-dropdown-hover">
     <button class="w3-button">VIEW TASKS</button>
       <div class="w3-dropdown-content w3-bar-block w3-card-4">
@@ -105,40 +170,66 @@ body, html {
   </div>
 
         <!----- CREATE A TASK BUTTON ----->
-        <div class="w3-container w3-center">
-          <button onclick="document.getElementById('id01').style.display='block'" class="w3-center w3-button w3-green w3-large">CREATE A TASK</button>
+        <div class="w3-container">
+          <button onclick="document.getElementById('id01').style.display='block'" class="w3-button w3-green w3-large">CREATE A TASK</button>
           <div id="id01" class="w3-modal">
             <div class="w3-modal-content w3-card-4 w3-animate-zoom" style="max-width:600px">
               <div class="w3-center"><br>
                 <span onclick="document.getElementById('id01').style.display='none'" class="w3-button w3-xlarge w3-hover-red w3-display-topright" title="Close Modal">&times;</span>
                  <span class="w3-center w3-padding-large w3-black w3-xlarge w3-wide w3-animate-opacity"> CREATE A TASK </span>
-        </div>
-        <!----- FORM INSIDE CREATE A TASK  ----->
-        <form class="w3-container">
-        <div class="w3-section">
-          <label><b>Task Description</b></label>
-          <input class="w3-input w3-border w3-margin-bottom" type="text" placeholder="Enter Task" name="task" required>
-          <label><b>Task Category</b></label>
-            <!----- Allow user to create category if selecting create new  ----->
-          <select class="w3-select w3-border" name="category">
-            <option value="" disabled selected>Choose a category</option>
-            <option value="1">Create a new category</option>
-            <option value="2">test</option>
-            <option value="3">test</option>
-          </select>
-          <label><b>Due Date</b></label>
-          <input class="w3-input w3-border w3-margin-bottom" type="date" value="2021-05-10" name="date" required>
-          <label><b>Priority Level (1-4) (1 is the highest)</b></label>
-          <input class="w3-input w3-border w3-margin-bottom" type="number" value="2" name="taskPriority" min="1" step="1" max="4" required>
-          <button class="w3-button w3-block w3-green w3-section w3-padding" type="submit" onsubmit="return post();">SUBMIT</button>
-        </div>
-      </form>
-        
-
+              </div>
+              <!----- FORM INSIDE CREATE A TASK  ----->
+              <form class="w3-container" action="/database.php">
+                <div class="w3-section">
+                  <label><b>Task Description</b></label>
+                    <input class="w3-input w3-border w3-margin-bottom" type="text" placeholder="Enter Task" name="task" required>
+                  <label><b>Task Category</b></label>
+                    <select class="w3-select w3-border" name="category">
+                      <option value="" disabled selected>Choose a category</option>
+                      <option value="1">test</option>
+                      <option value="2">test</option>
+                      <option value="3">test</option>
+                    </select>
+                  <label><b>Due Date</b></label>
+                    <input class="w3-input w3-border w3-margin-bottom" type="date" value="2021-05-10" name="date" required>
+                    <label><b>Priority Level (1-4)</b></label>
+                    <input class="w3-input w3-border w3-margin-bottom" type="number" value="2" name="taskPriority" min="1" step="1" max="4" required>
+                    <button class="w3-button w3-block w3-green w3-section w3-padding" type="submit">Login</button>
+                  </div>
+                  </form>
+                </div>
+              </div>
+            </div>
+  <br>
+      <!----- VIEW TASKS ----->
+       <div class="w3-container w3-dropdown-hover">
+    <button class="w3-button w3-dropdown w3-green w3-large">VIEW TASKS</button>
+      <div class="w3-dropdown-content w3-bar-block w3-card-4">
+        <a href="#" class="w3-bar-item w3-button">DUE-TODAY</a>
+        <a href="#" class="w3-bar-item w3-button">DUE-TOMORROW</a>
+        <a href="#" class="w3-bar-item w3-button">DUE IN 7 DAYS</a>
+      </div>
     </div>
-  </div>
-</div>
+  <br>
+    <div class="w3-container">
+    <button class="w3-button w3-dropdown w3-green w3-large">WEEKLY REPORTS</button>
+    </div>
+  <div class="w3-container w3-center w3-dropdown-hover">
+    <button class="w3-button w3-dropdown w3-green w3-large">CATEGORIES</button>
+      <div class="w3-dropdown-content w3-bar-block w3-card-4">
+         <button class="w3-button w3-dropdown w3-green W3-right"> + </button>
+        <a class="w3-bar-item w3-container " >EXAMPLE <input type="checkbox">
+  <span class="checkmark"></span></a>
+        <a class="w3-bar-item w3-container " >EXAMPLE <input type="checkbox">
+  <span class="checkmark"></span></a>
+        <a class="w3-bar-item w3-container " >EXAMPLE <input type="checkbox">
+  <span class="checkmark"></span></a>
+          <button class="w3-button w3-dropdown w3-green w3-small"> VIEW </button><button class="w3-button w3-dropdown w3-red w3-small" button type="submit" name="send" value="delete"> DELETE </button>
+        </div>
+      </div>
+    </div>
   
+ <!----- Lists  ----->
 <div class="w3-content w3-display-container w3-center " id="lists">
    <span class = "w3-middle"> 
   <ul class="w3-ul w3-container w3-margin w3-card-4 " style="width:30%">
@@ -212,6 +303,7 @@ function toggleFunction() {
 
 </body>
 </html>
+
 
 
 
