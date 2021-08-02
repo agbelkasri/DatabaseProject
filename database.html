@@ -163,46 +163,6 @@ body, html {
     // Declare arrays
     var events;
     var seats;
-
-    //================================================================
-    // loadEvents
-    //================================================================
-    function loadEvents()
-    {
-      $(function()
-      {    
-        var queryString = "request=get";
-        $.getJSON(
-          "CrislerArena-Events.json", 
-          queryString, 
-          loadEventsResponse);
-      });
-    }
-    
-    //================================================================
-    // loadEventsResponse
-    //================================================================
-    function loadEventsResponse(data, status)
-    {
-      events = data;
-      console.log("Events data retrieved.");
-      setSeats();
-    }
-
-    //================================================================
-    // loadSeats
-    //================================================================
-    function loadSeats()
-    {
-      $(function()
-      {    
-        var queryString = "request=get";
-        $.getJSON(
-          "CrislerArena-Seats.json", 
-          queryString, 
-          loadSeatsResponse);
-      });
-    }
     
     //================================================================
     // loadSeatsResponse
@@ -212,36 +172,6 @@ body, html {
       seats = data;
       console.log("Seats data retrieved.");
       loadEvents();
-    }
-
-    //================================================================
-    // seatTypeSelected
-    //================================================================
-    function seatTypeSelected()
-    {
-      
-      // Get seat cost
-      var selection = 
-        document.querySelector('input[name="rgSeatType"]:checked').value;
-      var index = 0;
-      while (index < seats.length && seats[index][0] != selection)
-        index = index + 1;
-
-      // Declare variables
-      var seatCost = seats[index][1];
-      var subtotal = txtTickets.value * seatCost;
-      var tax = subtotal * 0.06;
-      var total = subtotal + tax;
-      
-      // Set text boxes
-      txtSeatCost.value = seatCost.toFixed(2);
-      txtSubtotal.value = subtotal.toFixed(2);
-      txtTax.value = tax.toFixed(2);
-      txtTotal.value = total.toFixed(2);
-     
-      console.log("Radio button " + selection + 
-        " (" + index + ") selected.");
-        
     }
 
     //================================================================
@@ -271,43 +201,6 @@ body, html {
       }
       console.log("Events combo box set.");
       seatTypeSelected();
-        
-    }
-
-    //================================================================
-    // setSeats
-    //================================================================
-    function setSeats()
-    {
-
-      // Declare variables
-      var i;
-      var inp;
-      var tx;
-
-      // Loop through events array to build combo box
-      for (i = 0; i < seats.length; i++)
-      {
-              
-        // Create radio button and add to radio group
-        inp = document.createElement("input");
-        inp.setAttribute("type", "radio");
-        inp.setAttribute("name", "rgSeatType");
-        inp.setAttribute("value", seats[i][0]);
-        inp.setAttribute("onchange", "seatTypeSelected()");
-        if (i == 0)
-          inp.setAttribute("checked", true);
-        divSeatType.appendChild(inp);
-        tx = document.createTextNode(seats[i][0]);
-        divSeatType.appendChild(tx);                                
-        inp = document.createElement("br");
-        divSeatType.appendChild(inp);                                
-        console.log("Radio button '" + seats[i][0] + ", " + 
-          seats[i][1] + "' added.");
-
-      }
-      console.log("Seat radio buttons set.");
-      setEvents();
         
     }
 
