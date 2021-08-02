@@ -75,7 +75,15 @@ body, html {
     <a href="#home" class="w3-bar-item w3-button">HOME</a>
     <a href="authorspage.html" class="w3-bar-item w3-button w3-hide-small"><i class="fa"></i> AUTHORS</a>
     <a href="database.html" class="w3-bar-item w3-button w3-hide-small"><i class="fa"></i> CREATE TASK</a>
-    <a href="database.html" class="w3-bar-item w3-button w3-hide-small"><i class="fa"></i> VIEW TASKS</a>
+    <div class="w3-dropdown-hover">
+    <button class="w3-button">VIEW TASKS</button>
+      <div class="w3-dropdown-content w3-bar-block w3-card-4">
+        <a href="#" class="w3-bar-item w3-button">DUE-TODAY</a>
+        <a href="#" class="w3-bar-item w3-button">DUE-TOMORROW</a>
+        <a href="#" class="w3-bar-item w3-button">DUE IN 7 DAYS</a>
+      </div>
+    </div>
+    <a href="database.html" class="w3-bar-item w3-button w3-hide-small"><i class="fa"></i>WEEKLY REPORTS</a>
     <a href="#" class="w3-bar-item w3-button w3-hide-small w3-right w3-hover-red">
       <i class="fa fa-search"></i>
     </a>
@@ -87,7 +95,7 @@ body, html {
     <a href="#" class="w3-bar-item w3-button">SEARCH</a>
   </div>
 </div>
-
+<br><br>
 <div class=" w3-display-container w3-padding-64 w3-opacity-min" id="title">
   <div class="w3-display-middle" style="white-space:nowrap;">
     <span class="w3-center w3-padding-large w3-black w3-xlarge w3-wide w3-animate-opacity"> To-Do List </span>
@@ -126,11 +134,7 @@ body, html {
   <br>
   
 
-
-  <div class="w3-content w3-display-container w3-padding-64" id="bottom">
-  <span class="w3-display-bottom"> <h3><em>Database Project</em></h3></span>
-  <p>Yeah</p>
- </div>
+  
     <div class="w3-col m6 w3-hide-small w3-padding-large">
       <p></p>
     </div>
