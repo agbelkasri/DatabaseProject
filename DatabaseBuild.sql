@@ -29,14 +29,15 @@ CREATE TABLE IF NOT EXISTS `dbTask`.`tbTask` (
   `Name` VARCHAR(45) NOT NULL,
   `Category` VARCHAR(60) NOT NULL,
   `EventDate` VARCHAR(20) NOT NULL,
+  `Tickets` VARCHAR(20) NOT NULL,
   PRIMARY KEY (`ID`))
 ENGINE = InnoDB;
 
 -- -------------------------------------------------------------------
 -- Insert data into table
 -- -------------------------------------------------------------------
-INSERT INTO tbTask (Name, Event, EventDate, Tickets, Total) VALUES 
-  ('John Cena',	'The Beatles', '4/20/4020', 3, 120.22),
+INSERT INTO tbTask (Name, Event, EventDate, Tickets) VALUES 
+  ('John Cena',	'The Beatles', '4/20/4020', Yeah),
 SELECT * FROM tbTask;
 
 -- -----------------------------------------------------

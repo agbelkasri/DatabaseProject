@@ -32,18 +32,31 @@
   <div class="contentPanel3">
     <?php
 
+      $servername = "DatabaseBuild";
+      $username = "root";
+      $password = "mysql";
+      $conn = new mysqli($servername, $username, $password);
+
+      if ($conn->connect_error) {
+        die("Connection failed: " . $conn->connect_error);
+      }
+      echo "Connected successfully";
+
+      $sql = INSERT INTO tbTasks (Name, Category, EventDate, Tickets)
+      VALUES ($_GET["task"], $_GET["category"], $_GET["date"], $_GET["taskPriority"]);
+
       echo "<label>Task name:</label>";
-      echo "<label>", $_GET["tbTask"], "</label>";
+      echo "<label>", $_GET["task"], "</label>";
       echo "<br>";
-      echo "<label>Customer e-mail:</label>";
-      echo "<label>", $_GET["txtCustomerEmail"], "</label>";
+      echo "<label>Category:</label>";
+      echo "<label>", $_GET["category"], "</label>";
       echo "<br>";
 
-      echo "<label>Event:</label>";
-      echo "<label>", $_GET["cmbEvent"], "</label>";
-      echo "<br>";
       echo "<label>Date:</label>";
-      echo "<label>", $_GET["txtDate"], "</label>";
+      echo "<label>", $_GET["date"], "</label>";
+      echo "<br>";
+      echo "<label>Priority:</label>";
+      echo "<label>", $_GET["taskPriority"], "</label>";
       echo "<br>";
     ?>
     <br>
